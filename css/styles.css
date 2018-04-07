@@ -1,0 +1,38 @@
+body {
+  background-color: #cc2706;
+}
+.jumbotron {
+	  background-color: #d14500;
+	}
+h1 {
+  font-family: Courier;
+  text-align: center;
+    font-size: 60px;
+}
+h2 {
+  font-family: Verdana;
+  font-size: 40px;
+}
+h3 {
+  font-size: 35px
+}
+li {
+  font-family: Garamond;
+    font-size: 20px;
+}
+input {
+  font-family: Verdana;
+    font-size: 30px;
+}
+img {
+  max-height: 400px;
+  max-width: 400px;
+}
+#float {
+   float:right;
+}
+#orderTotal {
+	  font-size: 45px;
+	  font-weight: italic;
+	  font-family: times;
+    color: green;
