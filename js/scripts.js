@@ -20,14 +20,8 @@ var cheese = new Array();
 	 //get price for this order by calling the prototype cost function
 	 var orderCost = order.cost();
 	 $("#orderTotal").text("Thank you! Your order total is: $ " + orderCost);
-	 Customer.prototype.newPizza = function () {
-		 this.size = 0;
-		 this.cheese = 0;
-		 this.veggies = 0;
-		 this.meat ="";
-	 });
- });
-
+ 	});
+});
 // Back end logic
 // Constructor:
 function Pizza (size,cheese,veggies,meat) {
