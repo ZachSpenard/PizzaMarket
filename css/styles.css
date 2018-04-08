@@ -14,7 +14,13 @@ h2 {
   font-size: 40px;
 }
 h3 {
-  font-size: 35px
+  font-size: 35px;
+}
+h4 {
+  font-family: Courier;
+}
+h5 {
+  font-family: Courier;
 }
 li {
   font-family: Garamond;

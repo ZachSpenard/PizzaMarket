@@ -11,11 +11,19 @@ $(document).ready(function() {
 		$('input[name=veggies]:checked').each(function() {
 			veggies.push($(this).val());
 		});
+		var veggitarian = new Array();
+		$('input[name=veggitarian]:checked').each(function() {
+			veggitarian.push($(this).val());
+		});
+		var meatLovers = new Array();
+		$('input[name=meatLovers]:checked').each(function() {
+			meatLovers.push($(this).val());
+		});
 		var meat = new Array();
 		$('input[name=meat]:checked').each(function() {
 			meat.push($(this).val());
 		});
-		var order = new Pizza (size, cheese, veggies, meat);
+		var order = new Pizza (size, cheese, veggies, meat, veggitarian, meatLovers);
 		pizzaArray.push(order);
 	});
 	$("form#pizzaOrder").submit(function(event) {
@@ -29,11 +37,13 @@ $(document).ready(function() {
 });
 // Back end logic
 // Constructor:
-function Pizza (size,cheese,veggies,meat) {
+function Pizza (size,cheese,veggies,meat,veggitarian,meatLovers) {
 	this.size = size;
 	this.cheese = cheese;
 	this.veggies = veggies;
 	this.meat = meat;
+	this.veggitarian = veggitarian;
+	this.meatLovers = meatLovers;
 }
 // Prototype:
 Pizza.prototype.cost = function() {
@@ -42,5 +52,7 @@ Pizza.prototype.cost = function() {
 	var cheeseCost = 1 * this["cheese"].length;
 	var veggiesCost = 1.50 * this["veggies"].length;
 	var meatCost = 2 * this["meat"].length;
-	return pizzaCost + cheeseCost + meatCost + veggiesCost;
+	var veggitarianCost = 5 * this["veggitarian"].length;
+	var meatLoversCost = 5.50 * this["meatLovers"].length;
+	return pizzaCost + cheeseCost + meatCost + veggitarianCost + meatLoversCost + veggiesCost;
 }
